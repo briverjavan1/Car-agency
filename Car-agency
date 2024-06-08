@@ -1,0 +1,58 @@
+public class Car {
+    private String id;
+    private String make;
+    private String model;
+    private int year;
+    private double rentalPricePerDay;
+    private boolean isRented;
+
+    public Car(String id, String make, String model, int year, double rentalPricePerDay) {
+        this.id = id;
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.rentalPricePerDay = rentalPricePerDay;
+        this.isRented = false;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public double getRentalPricePerDay() {
+        return rentalPricePerDay;
+    }
+
+    public boolean isRented() {
+        return isRented;
+    }
+
+    public void rentCar() {
+        if (!isRented) {
+            isRented = true;
+        }
+    }
+
+    public void returnCar() {
+        if (isRented) {
+            isRented = false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return make + " " + model + " (" + year + ")";
+    }
+}
